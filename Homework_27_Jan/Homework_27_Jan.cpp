@@ -98,15 +98,15 @@ int main()
         HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
         for (int x = 0; x < width; x++)
         {
-            if (y == 0 || x <= width / 3)//Frenche blue
+            if (x < width / 3)//Frenche blue
             {
                 SetConsoleTextAttribute(h, 16);
             }
-            else if (y == 0 || x >= width / 3 && x <= width * 2 / 3)//white
+            else if ( x >= width / 3 && x < width * 2 / 3)//white
             {
                 SetConsoleTextAttribute(h, 7);
             }
-            else if (y == 0 || x > width * 2 / 3)//Red
+            else if (x >= width * 2 / 3)//Red
             {
                 SetConsoleTextAttribute(h, 4);
             }
