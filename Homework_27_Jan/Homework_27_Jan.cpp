@@ -4,24 +4,45 @@
 
 //2. Вывести на экран таблицу умножения(таблицу Пифагора).
 
-#include <iostream>
-#include <Windows.h>
-using namespace std;
-int main()
-{
-	cout << "\t\tTable of PIFAGARA\n";
-	for (int x = 2; x < 10; x++)
-	{
-		for (int y = 2; y < 10 ; y++)
-		{
-			cout << y << "X" << x << "=" << y*x << "\t";
-			if (y == 9) cout << "\n";
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	cout << "\t\tTable of PIFAGARA\n";
+//	for (int x = 2; x < 10; x++)
+//	{
+//		for (int y = 2; y < 6 ; y++)
+//		{
+//			cout << y << "X" << x << "=" << y*x << "\t";
+//			if (y == 5) cout << "\n";	
+//		}
+//	}
+//	cout << "\n";
+//	for (int x = 2; x < 10; x++)
+//	{
+//		for (int y = 6; y < 10; y++)
+//		{
+//			cout << y << "X" << x << "=" << y * x << "\t";
+//			if (y == 9) cout << "\n";
+//		}
+//	}
+//}
 
-			
-		}
-	}
-
-}
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	for (int x = 1; x <= 10; x++)
+//	{
+//		for (int y = 1; y <= 10; y++)
+//		{
+//			cout << x * y << "\t";;
+//			if (y == 10) cout << "\n\n";
+//		}
+//	}
+//}
 
 //3. Ежемесячная стипендия студента составляет N гривен, а расходы на проживание превышают стипендию и составляют M
 //гривен в месяц. Рост цен ежемесячно увеличивает расходы на 3 % .
@@ -135,4 +156,59 @@ int main()
 //    }
 //}
 
+#include <iostream>//USA
+#include <Windows.h>
+using namespace std;
+int main()
+{
 
+    int width = 26;
+    int height = 13;
+    char symbol = 178;
+    char star = 42;
+    for (int y = 0; y < height; y++)
+    {
+        HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+        for (int x = 0; x < width; x++)
+        {
+            
+            if
+                (y < 7 && x == 0 || y < 7 && x == 11)//stars
+            {
+                SetConsoleTextAttribute(h, 16);
+                cout << symbol << symbol;
+            }
+            else if(y < 7 && x <= 10 && y % 2 !=0 && x % 2 !=0)//stars
+            {
+                SetConsoleTextAttribute(h, 7);
+                cout << star;
+                SetConsoleTextAttribute(h, 16);
+                cout << symbol;
+            }
+            else if (y < 7 && x <= 10 && y % 2 == 0 && x % 2 == 0 )
+            {
+                SetConsoleTextAttribute(h, 7);
+                cout << star;
+                SetConsoleTextAttribute(h, 16);
+                cout << symbol;
+            }
+            else if (y < 7 && x <= 10)//Frenche blue
+            {
+                SetConsoleTextAttribute(h, 16);
+                cout << symbol << symbol;
+            }
+            else if (y % 2 != 0)//white
+            {
+                SetConsoleTextAttribute(h, 7);
+                cout << symbol << symbol;
+            }
+            else if (y %2 == 0)//Red
+            {
+                SetConsoleTextAttribute(h, 4);
+                cout << symbol << symbol;
+            }
+            
+        }
+        cout << "\n";
+    }
+}
