@@ -2,6 +2,30 @@
 //Вычислить процент положительных чисел, процент отрицательных чисел и процент нулей.
 //Вычислить процент чётных чисел и процент нечётных.
 
+#include <iostream>
+#include <ctime>
+using namespace std;
+int main()
+{
+	
+	srand(time(NULL));
+	int n = rand() % 201 - 100;
+	int m = 0;
+	int p = 0;
+	int z = 0;
+	for (int x = 1; x <= 100; x++)
+	{
+		int n = rand() % 201 - 100;
+		if (n == 0) z = z + 1;
+		if (n > 0) p = p + 1;
+		if (n < 0) m = m + 1;
+		cout << n << "\n";
+	}
+	cout << "\nZero's - " << z << "%\n";
+	cout << "Positive - " << p << "%\n";
+	cout << "Negative - " << m << "%\n";
+}
+
 //2. Вывести на экран таблицу умножения(таблицу Пифагора).
 
 //#include <iostream>
@@ -53,6 +77,30 @@
 //на 3 разряда получится число 45123).
 
 //5. Написать программу, которая выводит на экран все простые числа в диапазоне от 2 до 10.000.000.
+
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main() 
+//{
+//	for (int x = 2; x < 10; x++)
+//	{
+//		for (int y = 2; y < 10; y++)
+//		{
+//			if 
+//				(y % 2 == 0)
+//			{
+//			
+//			}
+//			else if (y % 2 != 0 && y<=x)
+//			{
+//				cout << y << "\n";
+//			}
+//			
+//		}
+//	}
+//
+//}
 
 //6. Показать на экране все числа Армстронга в диапазоне от 0 до 10.000.000.
 
@@ -156,59 +204,57 @@
 //    }
 //}
 
-#include <iostream>//USA
-#include <Windows.h>
-using namespace std;
-int main()
-{
-
-    int width = 26;
-    int height = 13;
-    char symbol = 178;
-    char star = 42;
-    for (int y = 0; y < height; y++)
-    {
-        HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-        for (int x = 0; x < width; x++)
-        {
-            
-            if
-                (y < 7 && x == 0 || y < 7 && x == 11)//stars
-            {
-                SetConsoleTextAttribute(h, 16);
-                cout << symbol << symbol;
-            }
-            else if(y < 7 && x <= 10 && y % 2 !=0 && x % 2 !=0)//stars
-            {
-                SetConsoleTextAttribute(h, 7);
-                cout << star;
-                SetConsoleTextAttribute(h, 16);
-                cout << symbol;
-            }
-            else if (y < 7 && x <= 10 && y % 2 == 0 && x % 2 == 0 )
-            {
-                SetConsoleTextAttribute(h, 7);
-                cout << star;
-                SetConsoleTextAttribute(h, 16);
-                cout << symbol;
-            }
-            else if (y < 7 && x <= 10)//Frenche blue
-            {
-                SetConsoleTextAttribute(h, 16);
-                cout << symbol << symbol;
-            }
-            else if (y % 2 != 0)//white
-            {
-                SetConsoleTextAttribute(h, 7);
-                cout << symbol << symbol;
-            }
-            else if (y %2 == 0)//Red
-            {
-                SetConsoleTextAttribute(h, 4);
-                cout << symbol << symbol;
-            }
-            
-        }
-        cout << "\n";
-    }
-}
+//#include <iostream>//USA
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//
+//    int width = 26;
+//    int height = 13;
+//    char symbol = 178;
+//    char star = 42;
+//    for (int y = 0; y < height; y++)
+//    {
+//        HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+//        for (int x = 0; x < width; x++)
+//        {
+//            if
+//                (y < 7 && x == 0 || y < 7 && x == 11)//stars
+//            {
+//                SetConsoleTextAttribute(h, 16);
+//                cout << symbol << symbol;
+//            }
+//            else if(y < 7 && x <= 10 && y % 2 !=0 && x % 2 !=0)//stars
+//            {
+//                SetConsoleTextAttribute(h, 7);
+//                cout << star;
+//                SetConsoleTextAttribute(h, 16);
+//                cout << symbol;
+//            }
+//            else if (y < 7 && x <= 10 && y % 2 == 0 && x % 2 == 0 )
+//            {
+//                SetConsoleTextAttribute(h, 7);
+//                cout << star;
+//                SetConsoleTextAttribute(h, 16);
+//                cout << symbol;
+//            }
+//            else if (y < 7 && x <= 10)//Frenche blue
+//            {
+//                SetConsoleTextAttribute(h, 16);
+//                cout << symbol << symbol;
+//            }
+//            else if (y % 2 != 0)//white
+//            {
+//                SetConsoleTextAttribute(h, 7);
+//                cout << symbol << symbol;
+//            }
+//            else if (y %2 == 0)//Red
+//            {
+//                SetConsoleTextAttribute(h, 4);
+//                cout << symbol << symbol;
+//            }
+//        }
+//        cout << "\n";
+//    }
+//}
