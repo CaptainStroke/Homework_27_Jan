@@ -4,6 +4,25 @@
 
 //2. Вывести на экран таблицу умножения(таблицу Пифагора).
 
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	cout << "\t\tTable of PIFAGARA\n";
+	for (int x = 2; x < 10; x++)
+	{
+		for (int y = 2; y < 10 ; y++)
+		{
+			cout << y << "X" << x << "=" << y*x << "\t";
+			if (y == 9) cout << "\n";
+
+			
+		}
+	}
+
+}
+
 //3. Ежемесячная стипендия студента составляет N гривен, а расходы на проживание превышают стипендию и составляют M
 //гривен в месяц. Рост цен ежемесячно увеличивает расходы на 3 % .
 //Составьте программу расчёта суммы денег, которую необходимо единовременно попросить у родителей,
@@ -56,7 +75,7 @@
 //    int width = 29;
 //    int height = 20;
 //    char symbol = 178;
-//    for (int y = 0; y < height/2; y++)
+//    for(int y = 0; y < height/2; y++)
 //    {
 //        HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 //        for (int x = 0; x < width; x++)
@@ -84,41 +103,36 @@
 //     }
 //}
 
-#include <iostream>
-#include <Windows.h>
-using namespace std;
-int main()
-{
-
-    int width = 29;
-    int height = 20;
-    char symbol = 178;
-    for (int y = 0; y < height; y++)
-    {
-        HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-        for (int x = 0; x < width; x++)
-        {
-            if (x < width / 3)//Frenche blue
-            {
-                SetConsoleTextAttribute(h, 16);
-            }
-            else if ( x >= width / 3 && x < width * 2 / 3)//white
-            {
-                SetConsoleTextAttribute(h, 7);
-            }
-            else if (x >= width * 2 / 3)//Red
-            {
-                SetConsoleTextAttribute(h, 4);
-            }
-            
-       
-           
-            
-            
-            cout << symbol << symbol;
-        }
-        cout << "\n";
-    }
-}
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//
+//    int width = 29;
+//    int height = 20;
+//    char symbol = 178;
+//    for (int y = 0; y < height; y++)
+//    {
+//        HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+//        for (int x = 0; x < width; x++)
+//        {
+//            if (x < width / 3)//Frenche blue
+//            {
+//                SetConsoleTextAttribute(h, 16);
+//            }
+//            else if ( x >= width / 3 && x < width * 2 / 3)//white
+//            {
+//                SetConsoleTextAttribute(h, 7);
+//            }
+//            else if (x >= width * 2 / 3)//Red
+//            {
+//                SetConsoleTextAttribute(h, 4);
+//            }
+//            cout << symbol << symbol;
+//        }
+//        cout << "\n";
+//    }
+//}
 
 
