@@ -2,30 +2,54 @@
 //Вычислить процент положительных чисел, процент отрицательных чисел и процент нулей.
 //Вычислить процент чётных чисел и процент нечётных.
 
+//#include <iostream>
+//#include <ctime>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	int n = rand() % 201 - 100;
+//	int m = 0;
+//	int p = 0;
+//	int z = 0;
+//	for (int x = 1; x <= 100; x++)
+//	{
+//		int n = rand() % 201 - 100;
+//		if (n == 0) z = z + 1;
+//		if (n > 0) p = p + 1;
+//		if (n < 0) m = m + 1;
+//		cout << n << "\n";
+//	}
+//	cout << "\nZero's - " << z << "%\n";
+//	cout << "Positive - " << p << "%\n";
+//	cout << "Negative - " << m << "%\n";
+//}
+
 #include <iostream>
 #include <ctime>
 using namespace std;
 int main()
 {
-	
 	srand(time(NULL));
 	int n = rand() % 201 - 100;
 	int m = 0;
 	int p = 0;
 	int z = 0;
+	int i = 1;
 	for (int x = 1; x <= 100; x++)
 	{
+		
 		int n = rand() % 201 - 100;
-		if (n == 0) z = z + 1;
-		if (n > 0) p = p + 1;
-		if (n < 0) m = m + 1;
-		cout << n << "\n";
+		if (n == 0) z++;
+		if (n % 2 == 0) p++;
+		if (n % 2 != 0) m++;
+		cout << i++ << " - " << n << "\n";
 	}
 	cout << "\nZero's - " << z << "%\n";
 	cout << "Positive - " << p << "%\n";
 	cout << "Negative - " << m << "%\n";
 }
-
+// 
 //2. Вывести на экран таблицу умножения(таблицу Пифагора).
 
 //#include <iostream>
