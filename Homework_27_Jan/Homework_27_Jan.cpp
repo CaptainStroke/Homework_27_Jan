@@ -97,34 +97,109 @@
 //Составьте программу расчёта суммы денег, которую необходимо единовременно попросить у родителей,
 //чтобы можно было прожить учебный год(10 месяцев), используя только эти деньги и стипендию.
 
-//4. Осуществить циклический сдвиг влево введённого числа на N разрядов(например, при сдвиге числа 12345 влево
-//на 3 разряда получится число 45123).
-
-//5. Написать программу, которая выводит на экран все простые числа в диапазоне от 2 до 10.000.000.
-
-
 #include <iostream>
 #include <Windows.h>
 using namespace std;
 int main()
 {
-    ios::sync_with_stdio(false);
-    int i;
-    int num = 0; // counting simple numbers
-    int x = 2;
-    do
-{
-        for (i = 2; i <= x; i++)
-            if (!(x % i)) break;
-        if (i == x)
-            cout << ++num << " - " << x << endl;
-           x++;
-    } while (x <= 10000000);
+	float N; //= 1000; Stependiya
+	cin >> N; 
+	float M; // = 1100; Mivina i gulki
+	cin >> M;
+	float I = 0; // Inflation
+	float P; // Pension from family goes to help study
+	float G = 0; // Total for 10 month
+	for (int m = 1; m <= 10; m++)
+	{
+		G = G + M + M * I;
+		cout << "Month " << m << ". Spendings - " << M + M * I << " hrynas\n";
+		I = I + 0.03;
+	}
+	cout <<"Semester - " << G << "\n";
+	P = G - N * 10;
+	cout << "Parent's help - " << P;
 }
+
+
+//4. Осуществить циклический сдвиг влево введённого числа на N разрядов(например, при сдвиге числа 12345 влево
+//на 3 разряда получится число 45123).
+
+//#include <iostream> 
+//using namespace std;
+//
+//int main()
+//{
+//	int n = 12345;
+//	int a1 = n % 10;
+//	int a2 = n / 10 % 10;
+//	int a3 = n / 100 % 10;
+//	int a4 = n / 1000 % 10;
+//	int a5 = n / 10000 % 10;
+//	cout <<a5 << " - " << a4 << " - " << a3 << " - " << a2 << " - " << a1 << "\n";
+//	int b = 1;
+//	for (int s = 10000; s <= 99999 ; s++)
+//	{
+//		int b1 = s % 10;
+//		int b2 = s / 10 % 10;
+//		int b3 = s / 100 % 10;
+//		int b4 = s / 1000 % 10;
+//		int b5 = s / 10000 % 10;
+//		if (a4 == b1 && a5 == b2 && a1 == b3 && a2 == b4 && a3 == b4)
+//		{
+//			cout << b5 << " - " << b4 << " - " << b3 << " - " << b2 << " - " << b1 << "\n";
+//		}
+//		//cout << "anount " << s << "\n";
+//	}
+//
+//	
+//}
+
+//5. Написать программу, которая выводит на экран все простые числа в диапазоне от 2 до 10.000.000.
+
+
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//    ios::sync_with_stdio(false);
+//    int i;
+//    int num = 0; // counting simple numbers
+//    int x = 2;
+//    do
+//{
+//        for (i = 2; i <= x; i++)
+//            if (!(x % i)) break;
+//        if (i == x)
+//            cout << ++num << " - " << x << endl;
+//           x++;
+//    } while (x <= 10000000);
+//}
 
 //6. Показать на экране все числа Армстронга в диапазоне от 0 до 10.000.000.
 
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//    ios::sync_with_stdio(false);
+//    int i;
+//    int num = 0; // counting simple numbers
+//    int x = 2;
+//    do
+//    {
+//        for (i = 2; i <= x; i++)
+//            if (!(x % i)) break;
+//        if (i == x)
+//            cout << ++num << " - " << x << endl;
+//        x++;
+//    } while (x <= 10000000);
+//}
+
 //7. Показать на экране все совершенные числа в диапазоне от 0 до 10.000.000.
+
+
 
 //8. Показать на экране все числа Фибоначчи в диапазоне от 0 до 10.000.000.
 
