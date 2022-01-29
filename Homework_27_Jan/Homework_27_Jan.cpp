@@ -97,32 +97,56 @@
 //Составьте программу расчёта суммы денег, которую необходимо единовременно попросить у родителей,
 //чтобы можно было прожить учебный год(10 месяцев), используя только эти деньги и стипендию.
 
-#include <iostream>
-#include <Windows.h>
-using namespace std;
-int main()
-{
-	float N; //= 1000; Stependiya
-	cin >> N; 
-	float M; // = 1100; Mivina i gulki
-	cin >> M;
-	float I = 0; // Inflation
-	float P; // Pension from family goes to help study
-	float G = 0; // Total for 10 month
-	for (int m = 1; m <= 10; m++)
-	{
-		G = G + M + M * I;
-		cout << "Month " << m << ". Spendings - " << M + M * I << " hrynas\n";
-		I = I + 0.03;
-	}
-	cout <<"Semester - " << G << "\n";
-	P = G - N * 10;
-	cout << "Parent's help - " << P;
-}
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	float N; //= 1000; Stependiya
+//	cin >> N; 
+//	float M; // = 1100; Mivina i gulki
+//	cin >> M;
+//	float I = 0; // Inflation
+//	float P; // Pension from family goes to help study
+//	float G = 0; // Total for 10 month
+//	for (int m = 1; m <= 10; m++)
+//	{
+//		G = G + M + M * I;
+//		cout << "Month " << m << ". Spendings - " << M + M * I << " hrynas\n";
+//		I = I + 0.03;
+//	}
+//	cout <<"Semester - " << G << "\n";
+//	P = G - N * 10;
+//	cout << "Parent's help - " << P;
+//}
 
 
 //4. Осуществить циклический сдвиг влево введённого числа на N разрядов(например, при сдвиге числа 12345 влево
 //на 3 разряда получится число 45123).
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double x;
+    cout << "Enter the number - ";
+    cin >> x;
+    int i = 0;
+    int move;
+    int value;
+    for (x; x >= 1; i++)
+    {
+        x = x / 10;
+    }
+        x = int(round(x * pow(10, i)));
+        cout << "\nRazryadnost - " << i << "\n";
+        int N = 3;
+        move = i - N % i;
+        value = pow(10, move);
+    cout << "New number - " << int(x) % value << int(x / pow(10, move));
+}
 
 //#include <iostream> 
 //using namespace std;
