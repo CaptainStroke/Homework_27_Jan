@@ -2,7 +2,7 @@
 //Вычислить процент положительных чисел, процент отрицательных чисел и процент нулей.
 //Вычислить процент чётных чисел и процент нечётных.
 
-//#include <iostream>
+//#include <iostream> // positive, negative, zero
 //#include <ctime>
 //using namespace std;
 //int main()
@@ -25,30 +25,30 @@
 //	cout << "Negative - " << m << "%\n";
 //}
 
-#include <iostream>
-#include <ctime>
-using namespace std;
-int main()
-{
-	srand(time(NULL));
-	int n = rand() % 201 - 100;
-	int m = 0;
-	int p = 0;
-	int z = 0;
-	int i = 1;
-	for (int x = 1; x <= 100; x++)
-	{
-		
-		int n = rand() % 201 - 100;
-		if (n == 0) z++;
-		if (n % 2 == 0) p++;
-		if (n % 2 != 0) m++;
-		cout << i++ << " - " << n << "\n";
-	}
-	cout << "\nZero's - " << z << "%\n";
-	cout << "Positive - " << p << "%\n";
-	cout << "Negative - " << m << "%\n";
-}
+//#include <iostream>  // odd, even
+//#include <ctime>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	int n = rand() % 201 - 100;
+//	int m = 0;
+//	int p = 0;
+//	int z = 0;
+//	int i = 1;
+//	for (int x = 1; x <= 100; x++)
+//	{
+//		
+//		int n = rand() % 201 - 100;
+//		if (n == 0) z++;
+//		else if (n % 2 == 0) p++;
+//		if (n % 2 != 0) m++;
+//		cout << i++ << " - " << n << "\n";
+//	}
+//	cout << "\nZero's - " << z << "%\n";
+//	cout << "Positive - " << p << "%\n";
+//	cout << "Negative - " << m << "%\n";
+//}
 // 
 //2. Вывести на экран таблицу умножения(таблицу Пифагора).
 
@@ -102,29 +102,25 @@ int main()
 
 //5. Написать программу, которая выводит на экран все простые числа в диапазоне от 2 до 10.000.000.
 
-//#include <iostream>
-//#include <Windows.h>
-//using namespace std;
-//int main() 
-//{
-//	for (int x = 2; x < 10; x++)
-//	{
-//		for (int y = 2; y < 10; y++)
-//		{
-//			if 
-//				(y % 2 == 0)
-//			{
-//			
-//			}
-//			else if (y % 2 != 0 && y<=x)
-//			{
-//				cout << y << "\n";
-//			}
-//			
-//		}
-//	}
-//
-//}
+
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+    ios::sync_with_stdio(false);
+    int i;
+    int num = 0; // counting simple numbers
+    int x = 2;
+    do
+{
+        for (i = 2; i <= x; i++)
+            if (!(x % i)) break;
+        if (i == x)
+            cout << ++num << " - " << x << endl;
+           x++;
+    } while (x <= 10000000);
+}
 
 //6. Показать на экране все числа Армстронга в диапазоне от 0 до 10.000.000.
 
