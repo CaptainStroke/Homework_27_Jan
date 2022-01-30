@@ -124,29 +124,29 @@
 //4. Осуществить циклический сдвиг влево введённого числа на N разрядов(например, при сдвиге числа 12345 влево
 //на 3 разряда получится число 45123).
 
-#include <iostream>
-#include <cmath>
-using namespace std;
-
-int main()
-{
-    double x;
-    cout << "Enter the number - ";
-    cin >> x;
-    int i = 0;
-    int move;
-    int value;
-    for (x; x >= 1; i++)
-    {
-        x = x / 10;
-    }
-        x = int(round(x * pow(10, i)));
-        cout << "\nRazryadnost - " << i << "\n";
-        int N = 3;
-        move = i - N % i;
-        value = pow(10, move);
-    cout << "New number - " << int(x) % value << int(x / pow(10, move));
-}
+//#include <iostream>
+//#include <cmath>
+//using namespace std;
+//
+//int main()
+//{
+//    double x;
+//    cout << "Enter the number - ";
+//    cin >> x;
+//    int i = 0;
+//    int move;
+//    int value;
+//    for (x; x >= 1; i++)
+//    {
+//        x = x / 10;
+//    }
+//        x = int(round(x * pow(10, i)));
+//        cout << "\nRazryadnost - " << i << "\n";
+//        int N = 3;
+//        move = i - N % i;
+//        value = pow(10, move);
+//    cout << "New number - " << int(x) % value << int(x / pow(10, move));
+//}
 
 //#include <iostream> 
 //using namespace std;
@@ -226,6 +226,21 @@ int main()
 
 
 //8. Показать на экране все числа Фибоначчи в диапазоне от 0 до 10.000.000.
+
+//#include <iostream>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	cout << "Fibonachi sequence:\n";
+//	for (int f = 0, x = 1; f <= 10000000;)
+//	{
+//		cout << f << "\n";
+//		f = f + x;
+//		cout << x << "\n";
+//		x = x + f;
+//	}
+//}
 
 //9. ФЛАГИ:
 //-УКРАИНА
