@@ -148,38 +148,7 @@
 //    cout << "New number - " << int(x) % value << int(x / pow(10, move));
 //}
 
-//#include <iostream> 
-//using namespace std;
-//
-//int main()
-//{
-//	int n = 12345;
-//	int a1 = n % 10;
-//	int a2 = n / 10 % 10;
-//	int a3 = n / 100 % 10;
-//	int a4 = n / 1000 % 10;
-//	int a5 = n / 10000 % 10;
-//	cout <<a5 << " - " << a4 << " - " << a3 << " - " << a2 << " - " << a1 << "\n";
-//	int b = 1;
-//	for (int s = 10000; s <= 99999 ; s++)
-//	{
-//		int b1 = s % 10;
-//		int b2 = s / 10 % 10;
-//		int b3 = s / 100 % 10;
-//		int b4 = s / 1000 % 10;
-//		int b5 = s / 10000 % 10;
-//		if (a4 == b1 && a5 == b2 && a1 == b3 && a2 == b4 && a3 == b4)
-//		{
-//			cout << b5 << " - " << b4 << " - " << b3 << " - " << b2 << " - " << b1 << "\n";
-//		}
-//		//cout << "anount " << s << "\n";
-//	}
-//
-//	
-//}
-
 //5. Написать программу, которая выводит на экран все простые числа в диапазоне от 2 до 10.000.000.
-
 
 //#include <iostream>
 //#include <Windows.h>
@@ -202,24 +171,29 @@
 
 //6. Показать на экране все числа Армстронга в диапазоне от 0 до 10.000.000.
 
-//#include <iostream>
-//#include <Windows.h>
-//using namespace std;
-//int main()
-//{
-//    ios::sync_with_stdio(false);
-//    int i;
-//    int num = 0; // counting simple numbers
-//    int x = 2;
-//    do
-//    {
-//        for (i = 2; i <= x; i++)
-//            if (!(x % i)) break;
-//        if (i == x)
-//            cout << ++num << " - " << x << endl;
-//        x++;
-//    } while (x <= 10000000);
-//}
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    for (int i = 0; i <= 8; i++)
+    {
+        for (int x = -1 + pow(10, i-1); x <= 10000000; x++)
+        {
+            int n1 = pow(x % 10, i);
+            int n2 = pow(x / 10 % 10, i);
+            int n3 = pow(x / 100 % 10, i);
+            int n4 = pow(x / 1000 % 10, i);
+            int n5 = pow(x / 10000 % 10, i);
+            int n6 = pow(x / 100000 % 10, i);
+            int n7 = pow(x / 1000000 % 10, i);
+            int n8 = pow(x / 10000000 % 10, i);
+            if (i == 0);
+            else if (n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 == x) cout << x << "\n";
+        }
+    }
+}
 
 //7. Показать на экране все совершенные числа в диапазоне от 0 до 10.000.000.
 
@@ -236,9 +210,9 @@
 //	for (int f = 0, x = 1; f <= 10000000;)
 //	{
 //		cout << f << "\n";
-//		f = f + x;
+//		f += x;
 //		cout << x << "\n";
-//		x = x + f;
+//		x += f;
 //	}
 //}
 
