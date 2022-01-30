@@ -201,17 +201,17 @@
 using namespace std;
 int main()
 {
-    for (int i = 2; i <= 10000000; i++)
+    for (int i = 2; i <= 40000000; i++)
     {
-         for (int x = 1, p = 0; x <= i/2; x++)
+        int p = 0;
+        for (int x = 1; x <= i / 2; x++)
         {
-             
-         if (i % x == 0) 
-         {
-             p = p + x;
-         }
-         if (i == p) cout << i<< " - Perfect number - " << p << "\n";
+            if (i % x == 0)
+            {
+                p += x;
+            }
         }
+         if (p == i) cout << i << " - Perfect number - \n";
     }
 }
 
@@ -383,3 +383,5 @@ int main()
 //        cout << "\n";
 //    }
 //}
+
+
