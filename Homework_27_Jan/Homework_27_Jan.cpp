@@ -171,32 +171,49 @@
 
 //6. Показать на экране все числа Армстронга в диапазоне от 0 до 10.000.000.
 
-#include <iostream>
-#include <cmath>
-using namespace std;
-
-int main()
-{
-    for (int i = 0; i <= 8; i++)
-    {
-        for (int x = -1 + pow(10, i-1); x <= 10000000; x++)
-        {
-            int n1 = pow(x % 10, i);
-            int n2 = pow(x / 10 % 10, i);
-            int n3 = pow(x / 100 % 10, i);
-            int n4 = pow(x / 1000 % 10, i);
-            int n5 = pow(x / 10000 % 10, i);
-            int n6 = pow(x / 100000 % 10, i);
-            int n7 = pow(x / 1000000 % 10, i);
-            int n8 = pow(x / 10000000 % 10, i);
-            if (i == 0);
-            else if (n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 == x) cout << x << "\n";
-        }
-    }
-}
+//#include <iostream>
+//#include <cmath>
+//using namespace std;
+//int main()
+//{
+//    for (int i = 0; i <= 8; i++)
+//    {
+//        for (int x = -1 + pow(10, i-1); x <= 10000000; x++)
+//        {
+//            int n1 = pow(x % 10, i);
+//            int n2 = pow(x / 10 % 10, i);
+//            int n3 = pow(x / 100 % 10, i);
+//            int n4 = pow(x / 1000 % 10, i);
+//            int n5 = pow(x / 10000 % 10, i);
+//            int n6 = pow(x / 100000 % 10, i);
+//            int n7 = pow(x / 1000000 % 10, i);
+//            int n8 = pow(x / 10000000 % 10, i);
+//            if (i == 0);
+//            else if (n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 == x) cout << x << "\n";
+//        }
+//    }
+//}
 
 //7. Показать на экране все совершенные числа в диапазоне от 0 до 10.000.000.
 
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    for (int i = 2; i <= 10000000; i++)
+    {
+         for (int x = 1, p = 0; x <= i/2; x++)
+        {
+             
+         if (i % x == 0) 
+         {
+             p = p + x;
+         }
+         if (i == p) cout << i<< " - Perfect number - " << p << "\n";
+        }
+    }
+}
 
 
 //8. Показать на экране все числа Фибоначчи в диапазоне от 0 до 10.000.000.
